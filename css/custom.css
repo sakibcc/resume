@@ -1,0 +1,434 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+html,
+body {
+  width: 100%;
+  font-family: sans-serif;
+  font-size: 100px;
+}
+em,
+i {
+  font-style: normal;
+}
+.linebar {
+  position: relative;
+}
+.linebar .maskbar {
+  width: 0;
+}
+.linebar:after {
+  position: absolute;
+  z-index: 1;
+  content: ' ';
+  display: block;
+  box-sizing: border-box;
+  width: 0.2rem;
+  height: 0.2rem;
+  border: 5px solid rgba(240, 240, 240, 0.7);
+  border-radius: 50% 50%;
+  overflow: hidden;
+  background-color: #CF9;
+  border: .03rem solid #9C3;
+  margin-top: -0.05rem;
+  margin-left: 0;
+  transition: all 1s;
+}
+.fullpage {
+  width: 100%;
+  font-size: 18px;
+}
+.fullpage p {
+  font-size: 16px;
+}
+.fullpage .title {
+  font-size: 36px;
+}
+.fullpage .myinfo {
+  font-size: 20px;
+}
+.fullpage .company {
+  font-size: 18px;
+}
+.page1 {
+  background-color: #4dd0e1;
+}
+.page2 {
+  background-color: #22c3aa;
+}
+.page3 {
+  background-color: #fb6d7e;
+}
+.page4 {
+  background-color: #4dd0e1;
+}
+.page5 {
+  background-color: #DA70D6;
+}
+.title {
+  color: #fff;
+  text-shadow: 0rem .04rem .04rem #505252;
+  font-weight: normal;
+  margin-bottom: 0.15rem;
+}
+.active .skills .skill-list span.HTML .maskbar {
+  width: 89%;
+}
+.active .skills .skill-list span.HTML:after {
+  margin-left: 87%;
+}
+.active .skills .skill-list span.CSS .maskbar {
+  width: 85%;
+}
+.active .skills .skill-list span.CSS:after {
+  margin-left: 83%;
+}
+.active .skills .skill-list span.JS .maskbar {
+  width: 94%;
+}
+.active .skills .skill-list span.JS:after {
+  margin-left: 92%;
+}
+.active .skills .skill-list span.JQ .maskbar {
+  width: 82%;
+}
+.active .skills .skill-list span.JQ:after {
+  margin-left: 80%;
+}
+.active .skills .skill-list span.ES .maskbar {
+  width: 75%;
+}
+.active .skills .skill-list span.ES:after {
+  margin-left: 73%;
+}
+.active .skills .skill-list span.LESS .maskbar {
+  width: 77%;
+}
+.active .skills .skill-list span.LESS:after {
+  margin-left: 75%;
+}
+.active .skills .skill-list span.WG .maskbar {
+  width: 67%;
+}
+.active .skills .skill-list span.WG:after {
+  margin-left: 65%;
+}
+.active .works .workinfo {
+  animation: upfade linear .7s forwards;
+}
+.active .works .workinfo:last-child {
+  animation: upfade linear .8s forwards .5s;
+}
+.githubicon {
+  display: block;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: url(../img/giticon.png) no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  margin-top: 2.3rem;
+  margin-left: 0.78rem;
+  cursor: pointer;
+}
+.container {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 0.14rem;
+}
+.container .imgs {
+  box-sizing: border-box;
+  width: 2rem;
+  height: 2rem;
+  border: 5px solid rgba(240, 240, 240, 0.7);
+  border-radius: 50% 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: .15rem;
+  box-shadow: 0 0.06rem 0.22rem 0 rgba(0, 0, 0, 0.1), 0 0.16rem 3rem 0 rgba(0, 0, 0, 0.3);
+}
+.container .imgs img {
+  width: 100%;
+  height: 100%;
+}
+.container .myinfo {
+  color: #fff;
+  margin-bottom: 0.15rem;
+}
+.container .about {
+  color: #bcf1f8;
+}
+.page2 {
+  display: table;
+}
+.skills {
+  text-align: center;
+  color: #fff;
+  display: table-cell;
+  vertical-align: middle;
+}
+.skills .skill-list {
+  width: 60%;
+  text-align: left;
+  margin: 0 auto;
+}
+.skills .skill-list span {
+  display: inline-block;
+  width: 100%;
+  height: 0.1rem;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: all 1s;
+}
+.skills .skill-list .maskbar {
+  position: absolute;
+  background-color: skyblue;
+}
+.skills .skill-list .HTML,
+.skills .skill-list .CSS,
+.skills .skill-list .JS,
+.skills .skill-list .JQ,
+.skills .skill-list .ES,
+.skills .skill-list .LESS,
+.skills .skill-list .WG {
+  position: relative;
+}
+.skills .skill-list .HTML .maskbar,
+.skills .skill-list .CSS .maskbar,
+.skills .skill-list .JS .maskbar,
+.skills .skill-list .JQ .maskbar,
+.skills .skill-list .ES .maskbar,
+.skills .skill-list .LESS .maskbar,
+.skills .skill-list .WG .maskbar {
+  width: 0;
+}
+.skills .skill-list .HTML:after,
+.skills .skill-list .CSS:after,
+.skills .skill-list .JS:after,
+.skills .skill-list .JQ:after,
+.skills .skill-list .ES:after,
+.skills .skill-list .LESS:after,
+.skills .skill-list .WG:after {
+  position: absolute;
+  z-index: 1;
+  content: ' ';
+  display: block;
+  box-sizing: border-box;
+  width: 0.2rem;
+  height: 0.2rem;
+  border: 5px solid rgba(240, 240, 240, 0.7);
+  border-radius: 50% 50%;
+  overflow: hidden;
+  background-color: #CF9;
+  border: .03rem solid #9C3;
+  margin-top: -0.05rem;
+  margin-left: 0;
+  transition: all 1s;
+}
+.page3 {
+  display: flex;
+  align-items: center;
+}
+.works {
+  flex: 1;
+  text-align: center;
+}
+.works .title {
+  margin-bottom: 0.4rem;
+}
+.works .worktimes {
+  width: 50%;
+  margin: 0 auto;
+  border-left: .02rem solid white;
+}
+.works .workinfo {
+  position: relative;
+  text-align: start;
+  margin-left: 0.2rem;
+  padding-bottom: 0.8rem;
+  transform: translate3d(0, 0, 0);
+  top: -1rem;
+  opacity: 0;
+}
+.works .workinfo:last-child {
+  padding-bottom: 0.2rem;
+}
+.works .workinfo .company {
+  color: #fff;
+  padding-bottom: .06rem;
+}
+.works .workinfo p {
+  position: relative;
+  color: #fff;
+  line-height: 0.24rem;
+  padding: .02rem .08rem;
+  background-color: #FF3E96;
+  border-radius: 5px;
+  transition: all .5s;
+}
+.works .workinfo p span {
+  position: absolute;
+  margin-left: -0.9rem;
+}
+.works .workinfo p span i {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 0.12rem;
+  height: 0.12rem;
+  border: 5px solid rgba(240, 240, 240, 0.7);
+  border-radius: 50% 50%;
+  overflow: hidden;
+  background-color: white;
+}
+.page4 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.page4 .title {
+  flex: 1 1 auto;
+  padding-top: 10%;
+}
+.programs {
+  flex: 10 1 auto;
+  text-align: center;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+.programs .pgitem {
+  margin: 0 0.1rem;
+  display: inline-block;
+  vertical-align: top;
+}
+.programs .pgitem .pgtitle {
+  box-sizing: border-box;
+  width: 2.2rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  border: .02rem solid #fff;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.programs .pgitem .description {
+  position: relative;
+  box-sizing: border-box;
+  width: 2.2rem;
+  border: .02rem solid #fff;
+  border-top: none;
+  border-bottom: none;
+  color: #fff;
+  padding: 0 0.1rem;
+  text-align: left;
+  text-indent: 0.24rem;
+  word-break: break-all;
+  transition: height .6s;
+  height: 0;
+  overflow: hidden;
+}
+.programs .pgitem .description p {
+  padding: .06rem 0;
+}
+.findme {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+.findme .infomation {
+  width: 90%;
+  margin: 0 auto;
+  color: #939;
+  font-weight: 600;
+}
+.findme .infomation a {
+  color: #fff;
+}
+.sidebar {
+  text-align: right;
+  height: 0;
+  overflow: hidden;
+}
+.sidebar .rtbar {
+  display: inline;
+  position: fixed;
+  z-index: 1;
+  width: .2rem;
+  height: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: -0.3rem;
+}
+.sidebar .rtbar li {
+  display: inline-block;
+  width: .1rem;
+  height: .1rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+.sidebar .rtbar .on {
+  transform: scale(1.3);
+  background-color: #ffffff;
+}
+@keyframes upfade {
+  from {
+    opacity: .2;
+    top: -1rem;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .programs {
+    justify-content: center;
+  }
+  .programs .pgitem {
+    margin: 0 0.4rem;
+  }
+}
+@media screen and (min-width: 769px) {
+  .active .programs .pgitem .description {
+    height: 2.8rem;
+    border-bottom: .02rem solid #fff;
+  }
+}
+@media screen and (max-width: 767px) {
+  .programs {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .programs .item1:hover .description,
+  .programs .item2:hover .description,
+  .programs .item3:hover .description {
+    height: 2.8rem;
+    border-bottom: .02rem solid #fff;
+  }
+}
+@media screen and (max-width: 480px) {
+  .works .worktimes {
+    width: 60%;
+  }
+  .works .worktimes .workinfo .company {
+    font-size: 16px;
+  }
+  .works .worktimes .workinfo p {
+    font-size: 14px;
+  }
+  .works .worktimes .workinfo p i {
+    margin-left: 0.07rem;
+  }
+}
