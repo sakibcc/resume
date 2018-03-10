@@ -23,7 +23,7 @@ $(function () {
 	});
 
 	//点击sidebar按钮事件
-	$('[index]').on('click', function(event) {
+	$('[index]').on('click touchstart', function(event) {
 		event.preventDefault();
 		var _index = $(this).attr('index');
 		var $p_height = $('.pages').css('height').split('px')[0];

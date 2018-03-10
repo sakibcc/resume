@@ -317,11 +317,11 @@ i {
   flex-direction: column;
 }
 .page4 .title {
-  flex: 1 1 auto;
+  flex: 1;
   padding-top: 10%;
 }
 .programs {
-  flex: 10 1 auto;
+  flex: 8;
   text-align: center;
   width: 80%;
   display: flex;
@@ -471,7 +471,8 @@ i {
   }
 }
 @media screen and (max-width: 321px) {
-  .works .worktimes {
-    display: none;
+  .programs .pgitem .pgtitle {
+    height: 0.4rem;
+    line-height: 0.4rem;
   }
 }

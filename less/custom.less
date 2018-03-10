@@ -323,12 +323,12 @@ em,i{font-style: normal;}
   align-items: center;
   flex-direction: column;
   .title {
-    flex:1 1 auto;
+    flex:1;
     padding-top: 10%;
   }
 }
 .programs {
-    flex: 10 1 auto;
+    flex: 8;
     text-align: center;
     width: 80%;
     display: flex;
@@ -510,8 +510,14 @@ em,i{font-style: normal;}
 //小于320 
 @media screen and (max-width: 321px) {
     .works {
-      .worktimes {
-        display: none;
-      }
+     
+    }
+    .programs {
+        .pgitem {
+          .pgtitle {
+            height:0.4rem;
+            line-height: 0.4rem;
+          }
+        }
     }
 }
