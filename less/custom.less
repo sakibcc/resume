@@ -92,6 +92,9 @@ em,i{font-style: normal;}
 .fullpage {
   width: 100%;
   #mediaFontSize(768);
+  .time {
+    #mediaFontSize(768,2px);
+  }
   p {
     #mediaFontSize(768,2px);
   }
@@ -259,45 +262,58 @@ em,i{font-style: normal;}
     margin-bottom: 0.4rem;
   }
   .worktimes {
-    width: 50%;
+    position: relative;
+    max-width: 600px;
     margin: 0 auto;
-    border-left: .02rem solid white;
-  }
-  .workinfo {
-      position: relative;
-      text-align: start;
-      margin-left: 0.2rem;
-      padding-bottom: 0.8rem;
-      //动画初始样式
-      transform: translate3d(0,0,0);
-      top: -1rem;
-      opacity: 0;
-
-      &:last-child {
-        padding-bottom: 0.2rem;
-      }
-      .company {
-        #color(white);
-        padding-bottom: .06rem;
-      }
-      p {
+    .timeline {
+      position: absolute;
+      width: 0.67rem;
+      height: 100%;
+      border-right: 2px solid #fff;
+    }
+    .workinfo {
+        width: 100%;
         position: relative;
-        #color(white);
-        line-height: 0.24rem;
-        padding: .02rem .08rem;
-        background-color: #FF3E96;
-        border-radius: 5px;
+        text-align: start;
+        margin-bottom: 0.2rem;
+        //动画初始样式
         transition: all .5s;
-        span {
-          position: absolute;
-          margin-left: -0.9rem;
+        top: -1rem;
+        opacity: 0;
+
+        .time {
+            display: inline-block;
+            float: left;
+            margin-right: 0.1rem;
+            padding: 0.1rem 0;
+            #color(white);
           i {
             display: inline-block;
+            margin-left: 0.06rem;
             #circlebox(0.12rem); 
             background-color: white;
           }
         }
-      }
+        .workdes {
+            padding: 0.1rem;
+            background-color: #FF3E96;
+            overflow: hidden;
+            border-radius: 5px;
+          h3 {
+            margin-bottom: 0.12rem;
+          }
+          .company {
+            #color(white);
+            padding-bottom: .06rem;
+          }
+          p {
+            text-indent: 2em;
+            display: inline-block;
+            #color(white);
+            line-height: 0.24rem;
+          } 
+        }
+    }
   }
 }
 
@@ -337,16 +353,18 @@ em,i{font-style: normal;}
         position: relative;
         box-sizing: border-box;
         width: 2.2rem;
+
         border: .02rem solid #fff;
         border-top: none;
         border-bottom: none;
+
         #color(white);
         padding: 0 0.1rem;
         text-align: left;
-        text-indent: 0.24rem;
+        text-indent: 2em;
         word-break: break-all;
 
-        transition: height .6s;
+        transition: all .6s;
         height: 0;
         overflow: hidden;
         p {
@@ -428,7 +446,7 @@ em,i{font-style: normal;}
     }
 }
 //大于768px
-@media screen and (min-width: 769px){
+@media screen and (min-width: 768px){
     .active {
       .programs {
         .pgitem{
@@ -442,12 +460,6 @@ em,i{font-style: normal;}
 }
 //平板,手机
 @media screen and (max-width: 767px) {
-    .works {
-        .worktimes {
-          width: 75%;
-          margin-left: 15%;
-        }
-    }
     .programs {
       flex-direction: column;
       justify-content: flex-start;
@@ -463,7 +475,9 @@ em,i{font-style: normal;}
         .item3{
           &:hover {
            .description {
+              transform:all .3s;
               height: 2.4rem;
+              padding-bottom: 0.44rem;
               border-bottom: .02rem solid #fff;
            }
          }
@@ -487,21 +501,10 @@ em,i{font-style: normal;}
           margin-bottom: 0.2rem;
         }
         .worktimes {
-          width: 75%;
-          margin-left: 15%;
-          .workinfo {
-            padding-bottom: 0.3rem;
-            .company {
-                font-size: 16px;
-            }
-            p{
-              font-size: 14px;
-              i{
-                margin-left:0.07rem;
-              }
-            }
-          }
+          margin-left: 0.1rem;
+          margin-right: 0.22rem;
         }
+        
       }
 }
 //小于320 
@@ -509,7 +512,6 @@ em,i{font-style: normal;}
     .works {
       .worktimes {
         display: none;
-        width: 70%;
       }
     }
 }
