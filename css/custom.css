@@ -42,6 +42,7 @@ i {
   transition: all 1s;
 }
 .fullpage {
+  will-change: top;
   width: 100%;
   font-size: 18px;
 }
@@ -186,8 +187,9 @@ i {
   vertical-align: middle;
 }
 .skills .skill-list {
-  width: 60%;
+  max-width: 8rem;
   text-align: left;
+  padding: 0 0.24rem 0 0.12rem;
   margin: 0 auto;
 }
 .skills .skill-list span {
@@ -258,6 +260,7 @@ i {
   position: relative;
   max-width: 600px;
   margin: 0 auto;
+  padding: 0 0.24rem 0 0.12rem;
 }
 .works .worktimes .timeline {
   position: absolute;
@@ -297,9 +300,6 @@ i {
   background-color: #FF3E96;
   overflow: hidden;
   border-radius: 5px;
-}
-.works .worktimes .workinfo .workdes h3 {
-  margin-bottom: 0.12rem;
 }
 .works .worktimes .workinfo .workdes .company {
   color: #FFF;
@@ -440,7 +440,6 @@ i {
   .programs .item1:hover .description,
   .programs .item2:hover .description,
   .programs .item3:hover .description {
-    transform: all .3s;
     height: 2.4rem;
     padding-bottom: 0.44rem;
     border-bottom: .02rem solid #fff;
@@ -463,11 +462,7 @@ i {
     font-size: 16px;
   }
   .works .title {
-    margin-bottom: 0.2rem;
-  }
-  .works .worktimes {
-    margin-left: 0.1rem;
-    margin-right: 0.22rem;
+    margin-bottom: 0.1rem;
   }
 }
 @media screen and (max-width: 321px) {

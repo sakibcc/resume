@@ -86,10 +86,9 @@ em,i{font-style: normal;}
     }
 }
 
-
-
 //主布局
 .fullpage {
+  will-change:top;
   width: 100%;
   #mediaFontSize(768);
   .time {
@@ -223,8 +222,9 @@ em,i{font-style: normal;}
   display: table-cell;
   vertical-align: middle;
   .skill-list {
-    width: 60%;
+    max-width: 8rem;
     text-align: left;
+    padding: 0 0.24rem 0 0.12rem;
     margin: 0 auto;
     span {
       display: inline-block;
@@ -265,6 +265,7 @@ em,i{font-style: normal;}
     position: relative;
     max-width: 600px;
     margin: 0 auto;
+    padding: 0 0.24rem 0 0.12rem;
     .timeline {
       position: absolute;
       width: 0.66rem;
@@ -299,9 +300,6 @@ em,i{font-style: normal;}
             background-color: #FF3E96;
             overflow: hidden;
             border-radius: 5px;
-          h3 {
-            margin-bottom: 0.12rem;
-          }
           .company {
             #color(white);
             padding-bottom: .06rem;
@@ -475,7 +473,6 @@ em,i{font-style: normal;}
         .item3{
           &:hover {
            .description {
-              transform:all .3s;
               height: 2.4rem;
               padding-bottom: 0.44rem;
               border-bottom: .02rem solid #fff;
@@ -498,19 +495,22 @@ em,i{font-style: normal;}
     }
     .works {
         .title {
-          margin-bottom: 0.2rem;
-        }
-        .worktimes {
-          margin-left: 0.1rem;
-          margin-right: 0.22rem;
-        }
-        
+          margin-bottom: 0.1rem;
+        }     
       }
 }
 //小于320 
 @media screen and (max-width: 321px) {
     .works {
-     
+      .worktimes{
+        .workinfo {
+          .workdes {
+            p {
+                
+            }
+          } 
+        }
+      }  
     }
     .programs {
         .pgitem {
