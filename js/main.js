@@ -24,6 +24,7 @@ $(function () {
 
 	//点击sidebar按钮事件
 	$('body').on('click touchend','[index]',function(event) {
+		event.preventDefault();
 		var _index = $(this).attr('index');
 		var $p_height = $('.pages').css('height').split('px')[0];
 		$(this).addClass('on').siblings().removeClass('on');
@@ -34,6 +35,5 @@ $(function () {
 			$('.page'+(_index)).addClass('active').siblings().removeClass('active');
 		},500);
 		$fullpage.animate({top: (- $p_height *(_index - 1))}, 500);
-		return false;
 	});
 })
