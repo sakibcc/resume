@@ -19,6 +19,7 @@ $(function () {
 			count = Math.abs($f.split('px')[0]) / $p.split('px')[0];
 			$('.page'+(count + 1)).addClass('active').siblings().removeClass('active');
 			$('[index ="'+(count+1)+'"]').addClass('on').siblings().removeClass('on');
+			$('.description').removeClass('touchon');
 		},600);
 	});
 
@@ -44,4 +45,4 @@ $(function () {
 		_currentdes.addClass('touchon');
 		$('.description').not(_currentdes[0]).removeClass('touchon');
 	});
-})
+})	
