@@ -96,11 +96,11 @@
 	    	event.preventDefault();
 	    	moveY = event.originalEvent.changedTouches[0].pageY;
 	    	var Y = moveY - startY;
-	    	if(Y > 0){
-	    		_prev();
-	    	}else if(Y < 0) {
-	    		_next();
-	    	}
+    		if(Y > 0){
+    			_prev();
+    		}else if(Y < 0) {
+    			_next();
+    		}
 	    });
 	}
 	return this;

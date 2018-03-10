@@ -36,4 +36,12 @@ $(function () {
 		},500);
 		$fullpage.animate({top: (- $p_height *(_index - 1))}, 500);
 	});
+
+	//触摸pgitem展开事件
+	$('.pgtitle').on('touchstart', function(event) {
+		event.preventDefault();
+		var _currentdes = $(this.parentNode).find('.description');
+		_currentdes.addClass('touchon');
+		$('.description').not(_currentdes[0]).removeClass('touchon');
+	});
 })

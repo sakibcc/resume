@@ -361,6 +361,11 @@ i {
 .programs .pgitem .description p {
   padding: .06rem 0;
 }
+.programs .pgitem .touchon {
+  height: 2.4rem;
+  padding-bottom: 0.44rem;
+  border-bottom: .02rem solid #fff;
+}
 .findme {
   position: relative;
   top: 50%;
