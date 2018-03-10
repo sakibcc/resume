@@ -17,9 +17,9 @@ $(function () {
 		timer = setTimeout(function () {
 			var $f = $('.fullpage').css('top');
 			count = Math.abs($f.split('px')[0]) / $p.split('px')[0];
+			if(count !== 3) $('.description').removeClass('touchon');
 			$('.page'+(count + 1)).addClass('active').siblings().removeClass('active');
 			$('[index ="'+(count+1)+'"]').addClass('on').siblings().removeClass('on');
-			$('.description').removeClass('touchon');
 		},600);
 	});
 
@@ -27,6 +27,7 @@ $(function () {
 	$('body').on('click touchend','[index]',function(event) {
 		event.preventDefault();
 		var _index = $(this).attr('index');
+		count = _index - 1;
 		var $p_height = $('.pages').css('height').split('px')[0];
 		$(this).addClass('on').siblings().removeClass('on');
 		var timer = null;
@@ -36,6 +37,7 @@ $(function () {
 			$('.page'+(_index)).addClass('active').siblings().removeClass('active');
 		},500);
 		$fullpage.animate({top: (- $p_height *(_index - 1))}, 500);
+		if(count !== 3) $('.description').removeClass('touchon');
 	});
 
 	//触摸pgitem展开事件
