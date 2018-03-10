@@ -39,15 +39,11 @@ em,i{font-style: normal;}
 }
 
 //对应不同媒体的字体大小
-//@scale ：区分同一页面不同文字块的字体大小
-#mediaFontSize (@dpr : 1, @dec : 0) {
-  & when (@dpr = 3) {
-    font-size: 48px - @dec;
+#mediaFontSize (@width : 768, @dec : 0) {
+  & when (@width = 480) {
+    font-size: 16px - @dec;
   }
-  & when (@dpr = 2) {
-    font-size: 36px - @dec;
-  }
-  & when (@dpr = 1) {
+  & when (@width = 768) {
     font-size: 18px - @dec;
   }
 }
@@ -95,9 +91,9 @@ em,i{font-style: normal;}
 //主布局
 .fullpage {
   width: 100%;
-  #mediaFontSize(1);
+  #mediaFontSize(768);
   p {
-    #mediaFontSize(1,2px);
+    #mediaFontSize(768,2px);
   }
   .title {font-size: 36px;}
   .myinfo {font-size: 20px;}
@@ -175,8 +171,9 @@ em,i{font-style: normal;}
   background: url(../img/giticon.png)  no-repeat;
   background-size: 100% 100%;
   position: absolute;
-  margin-top: 2.3rem;
-  margin-left: 0.78rem;
+  bottom: 0.04rem;
+  left: 50%;
+  margin-left: -0.2rem;
   cursor: pointer;
 }
 
@@ -455,7 +452,7 @@ em,i{font-style: normal;}
         .item3{
           &:hover {
            .description {
-              height: 2.8rem;
+              height: 2.4rem;
               border-bottom: .02rem solid #fff;
            }
          }
@@ -465,10 +462,23 @@ em,i{font-style: normal;}
 
 //手机(<480px)
 @media screen and (max-width: 480px) {
+    .fullpage {
+       #mediaFontSize(480);
+       p {
+         #mediaFontSize(480,2px);
+       }
+       .title {font-size: 30px;}
+       .myinfo {font-size: 18px;}
+       .company{font-size: 16px;}
+    }
     .works {
+        .title {
+          margin-bottom: 0.2rem;
+        }
         .worktimes {
           width: 60%;
           .workinfo {
+            padding-bottom: 0.3rem;
             .company {
                 font-size: 16px;
             }

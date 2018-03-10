@@ -134,8 +134,9 @@ i {
   background: url(../img/giticon.png) no-repeat;
   background-size: 100% 100%;
   position: absolute;
-  margin-top: 2.3rem;
-  margin-left: 0.78rem;
+  bottom: 0.04rem;
+  left: 50%;
+  margin-left: -0.2rem;
   cursor: pointer;
 }
 .container {
@@ -418,13 +419,34 @@ i {
   .programs .item1:hover .description,
   .programs .item2:hover .description,
   .programs .item3:hover .description {
-    height: 2.8rem;
+    height: 2.4rem;
     border-bottom: .02rem solid #fff;
   }
 }
 @media screen and (max-width: 480px) {
+  .fullpage {
+    font-size: 16px;
+  }
+  .fullpage p {
+    font-size: 14px;
+  }
+  .fullpage .title {
+    font-size: 30px;
+  }
+  .fullpage .myinfo {
+    font-size: 18px;
+  }
+  .fullpage .company {
+    font-size: 16px;
+  }
+  .works .title {
+    margin-bottom: 0.2rem;
+  }
   .works .worktimes {
     width: 60%;
+  }
+  .works .worktimes .workinfo {
+    padding-bottom: 0.3rem;
   }
   .works .worktimes .workinfo .company {
     font-size: 16px;
