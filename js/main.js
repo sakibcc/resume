@@ -27,7 +27,7 @@ $(function () {
 	$('body').on('click touchend','[index]',function(event) {
 		event.preventDefault();
 		var _index = $(this).attr('index');
-		count = _index - 1;
+		count = _index - 1;//更新count值
 		var $p_height = $('.pages').css('height').split('px')[0];
 		$(this).addClass('on').siblings().removeClass('on');
 		var timer = null;
