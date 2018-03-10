@@ -101,18 +101,23 @@ em,i{font-style: normal;}
 }
 
 .page1 {
+    overflow: hidden;
     #bg-color(page1);
 }
 .page2 {
+    overflow: hidden;
     #bg-color(page2);
 }
 .page3 {
+    overflow: hidden;
     #bg-color(page3);
 }
 .page4 {
+    overflow: hidden;
     #bg-color(page4);
 }
 .page5 {
+    overflow: hidden;
     #bg-color(page5);
 }
 //公共部分
@@ -437,6 +442,12 @@ em,i{font-style: normal;}
 }
 //平板,手机
 @media screen and (max-width: 767px) {
+    .works {
+        .worktimes {
+          width: 75%;
+          margin-left: 15%;
+        }
+    }
     .programs {
       flex-direction: column;
       justify-content: flex-start;
@@ -476,7 +487,8 @@ em,i{font-style: normal;}
           margin-bottom: 0.2rem;
         }
         .worktimes {
-          width: 60%;
+          width: 75%;
+          margin-left: 15%;
           .workinfo {
             padding-bottom: 0.3rem;
             .company {
@@ -491,4 +503,13 @@ em,i{font-style: normal;}
           }
         }
       }
+}
+//小于320 
+@media screen and (max-width: 321px) {
+    .works {
+      .worktimes {
+        display: none;
+        width: 70%;
+      }
+    }
 }

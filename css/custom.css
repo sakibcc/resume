@@ -58,18 +58,23 @@ i {
   font-size: 18px;
 }
 .page1 {
+  overflow: hidden;
   background-color: #4dd0e1;
 }
 .page2 {
+  overflow: hidden;
   background-color: #22c3aa;
 }
 .page3 {
+  overflow: hidden;
   background-color: #fb6d7e;
 }
 .page4 {
+  overflow: hidden;
   background-color: #4dd0e1;
 }
 .page5 {
+  overflow: hidden;
   background-color: #DA70D6;
 }
 .title {
@@ -407,6 +412,10 @@ i {
   }
 }
 @media screen and (max-width: 767px) {
+  .works .worktimes {
+    width: 75%;
+    margin-left: 15%;
+  }
   .programs {
     flex-direction: column;
     justify-content: flex-start;
@@ -443,7 +452,8 @@ i {
     margin-bottom: 0.2rem;
   }
   .works .worktimes {
-    width: 60%;
+    width: 75%;
+    margin-left: 15%;
   }
   .works .worktimes .workinfo {
     padding-bottom: 0.3rem;
@@ -456,5 +466,11 @@ i {
   }
   .works .worktimes .workinfo p i {
     margin-left: 0.07rem;
+  }
+}
+@media screen and (max-width: 321px) {
+  .works .worktimes {
+    display: none;
+    width: 70%;
   }
 }
