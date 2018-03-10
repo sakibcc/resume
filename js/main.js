@@ -24,6 +24,7 @@ $(function () {
 
 	//点击sidebar按钮事件
 	$('[index]').on('click', function(event) {
+		event.preventDefault();
 		var _index = $(this).attr('index');
 		var $p_height = $('.pages').css('height').split('px')[0];
 		$(this).addClass('on').siblings().removeClass('on');
