@@ -28,7 +28,7 @@ em,i{font-style: normal;}
 //字体颜色
 #color (@name) {
   & when (@name = white) {
-    color: #fff;
+    color: #FFF;
   }
   & when (@name = thinblue) {
     color : #bcf1f8;
@@ -444,6 +444,12 @@ em,i{font-style: normal;}
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
+        .pgitem {
+          .pgtitle {
+            height:0.6rem;
+            line-height: 0.6rem;
+          }
+        }
         .item1,
         .item2,
         .item3{

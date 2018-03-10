@@ -73,7 +73,7 @@ i {
   background-color: #DA70D6;
 }
 .title {
-  color: #fff;
+  color: #FFF;
   text-shadow: 0rem .04rem .04rem #505252;
   font-weight: normal;
   margin-bottom: 0.15rem;
@@ -161,7 +161,7 @@ i {
   height: 100%;
 }
 .container .myinfo {
-  color: #fff;
+  color: #FFF;
   margin-bottom: 0.15rem;
 }
 .container .about {
@@ -172,7 +172,7 @@ i {
 }
 .skills {
   text-align: center;
-  color: #fff;
+  color: #FFF;
   display: table-cell;
   vertical-align: middle;
 }
@@ -263,12 +263,12 @@ i {
   padding-bottom: 0.2rem;
 }
 .works .workinfo .company {
-  color: #fff;
+  color: #FFF;
   padding-bottom: .06rem;
 }
 .works .workinfo p {
   position: relative;
-  color: #fff;
+  color: #FFF;
   line-height: 0.24rem;
   padding: .02rem .08rem;
   background-color: #FF3E96;
@@ -316,7 +316,7 @@ i {
   height: 0.8rem;
   line-height: 0.8rem;
   border: .02rem solid #fff;
-  color: #fff;
+  color: #FFF;
   font-weight: 600;
   cursor: pointer;
 }
@@ -327,7 +327,7 @@ i {
   border: .02rem solid #fff;
   border-top: none;
   border-bottom: none;
-  color: #fff;
+  color: #FFF;
   padding: 0 0.1rem;
   text-align: left;
   text-indent: 0.24rem;
@@ -352,7 +352,7 @@ i {
   font-weight: 600;
 }
 .findme .infomation a {
-  color: #fff;
+  color: #FFF;
 }
 .sidebar {
   text-align: right;
@@ -410,6 +410,10 @@ i {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+  }
+  .programs .pgitem .pgtitle {
+    height: 0.6rem;
+    line-height: 0.6rem;
   }
   .programs .item1:hover .description,
   .programs .item2:hover .description,
