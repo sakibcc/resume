@@ -26,13 +26,12 @@ $(function () {
 	});
 
 	//点击sidebar按钮事件
-	$('body').on('touchend','[index]',function(e) {
+	$('body').on('click','[index]',function(e) {
 		var event = e || window.event,
 			_index = $(this).attr('index'),
 			$p_height = $('.pages').css('height').split('px')[0],
 			timer = null,
 			count = _index - 1;//更新count值
-		event.preventDefault();
 		$(this).addClass('on').siblings().removeClass('on');
 		clearTimeout(timer);
 		//延时触发添加active类的行为
@@ -43,7 +42,7 @@ $(function () {
 		if(count !== 3) $('.description').removeClass('touchon');
 	});
 
-	//触摸pgitem展开事件,
+	//触摸pgitem展开事件
 	$('.pgtitle').on('touchend', function(e) {
 		var event = e || window.event;
 		event.preventDefault();
