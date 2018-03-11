@@ -19,7 +19,7 @@ $(function () {
 		timer = setTimeout(function () {
 			var $f = $('.fullpage').css('top');
 			count = Math.abs($f.split('px')[0]) / $p.split('px')[0];
-			if(count !== 3) $('.description').removeClass('touchon');
+			if(count !== 3) $('.description').removeClass('touchon');//去除page4的touchon类
 			$('.page'+(count + 1)).addClass('active').siblings().removeClass('active');
 			$('[index ="'+(count+1)+'"]').addClass('on').siblings().removeClass('on');
 		},600);
@@ -34,15 +34,16 @@ $(function () {
 			count = _index - 1;//更新count值
 		$(this).addClass('on').siblings().removeClass('on');
 		clearTimeout(timer);
-		//延时触发添加active类的行为
+		//延时添加active类
 		timer = setTimeout(function () {
 			$('.page'+(_index)).addClass('active').siblings().removeClass('active');
 		},500);
 		$fullpage.animate({top: (- $p_height *(_index - 1))}, 500);
+		//去除page4的touchon类
 		if(count !== 3) $('.description').removeClass('touchon');
 	});
 
-	//触摸pgitem展开事件
+	//触摸pgitem展开事件，使用touchend触发增加体验性。
 	$('.pgtitle').on('touchend', function(e) {
 		var event = e || window.event;
 		event.preventDefault();
