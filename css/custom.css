@@ -130,9 +130,11 @@ i {
   margin-left: 65%;
 }
 .active .works .workinfo {
+  -webkit-animation: upfade linear .7s forwards;
   animation: upfade linear .7s forwards;
 }
 .active .works .workinfo:last-child {
+  -webkit-animation: upfade linear .8s forwards .5s;
   animation: upfade linear .8s forwards .5s;
 }
 .githubicon {
