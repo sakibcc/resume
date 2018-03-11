@@ -441,8 +441,8 @@ i {
     align-items: center;
   }
   .programs .pgitem .pgtitle {
-    height: 0.6rem;
-    line-height: 0.6rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
   }
   .programs .item1:hover .description,
   .programs .item2:hover .description,
