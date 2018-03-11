@@ -86,22 +86,24 @@
 	    	}
 	    });
 	    //绑定触屏滑动事件
-	    $(window).on('touchstart', function(e) {
+	    $(document).on('touchstart', function(e) {
 	    	var event = e || window.event;
-	    	event.preventDefault();
 	    	startY = event.originalEvent.changedTouches[0].pageY;
+		    $(document).on('touchmove', function(e) {
+		    	var event = e || window.event;
+		    	event.preventDefault();
+		    	moveY = event.originalEvent.changedTouches[0].pageY;
+		    	var Y = moveY - startY;
+	    		if(Y > 0){
+	    			_prev();
+	    		}else if(Y < 0) {
+	    			_next();
+	    		}
+		    });
 	    });
-	    $(window).on('touchmove', function(e) {
-	    	var event = e || window.event;
-	    	event.preventDefault();
-	    	moveY = event.originalEvent.changedTouches[0].pageY;
-	    	var Y = moveY - startY;
-    		if(Y > 0){
-    			_prev();
-    		}else if(Y < 0) {
-    			_next();
-    		}
-	    });
+	    // $(document).on('touchend', function(event) {
+	    // 	$(document).off('touchmove');    	
+	    // });
 	}
 	return this;
 }(window,jQuery))
