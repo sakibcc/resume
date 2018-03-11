@@ -89,21 +89,18 @@
 	    $(document).on('touchstart', function(e) {
 	    	var event = e || window.event;
 	    	startY = event.originalEvent.changedTouches[0].pageY;
-		    $(document).on('touchmove', function(e) {
-		    	var event = e || window.event;
-		    	event.preventDefault();
-		    	moveY = event.originalEvent.changedTouches[0].pageY;
-		    	var Y = moveY - startY;
-	    		if(Y > 0){
-	    			_prev();
-	    		}else if(Y < 0) {
-	    			_next();
-	    		}
-		    });
 	    });
-	    // $(document).on('touchend', function(event) {
-	    // 	$(document).off('touchmove');    	
-	    // });
+	    $(document).on('touchmove', function(e) {
+	    	var event = e || window.event;
+	    	event.preventDefault();
+	    	moveY = event.originalEvent.changedTouches[0].pageY;
+	    	var Y = moveY - startY;
+    		if(Y > 0){
+    			_prev();
+    		}else if(Y < 0) {
+    			_next();
+    		}
+	    });
 	}
 	return this;
 }(window,jQuery))
