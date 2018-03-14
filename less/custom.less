@@ -219,9 +219,11 @@ em,i{font-style: normal;}
 .skills {
   text-align: center;
   #color(white);
+  overflow: hidden;
   display: table-cell;
   vertical-align: middle;
   .skill-list {
+
     max-width: 8rem;
     text-align: left;
     padding: 0 0.24rem 0 0.12rem;
@@ -519,11 +521,28 @@ em,i{font-style: normal;}
 }
 
 //横屏
-@media screen and (orientation: landscape) {
-  .skills {
-    display: none;
-  }
-  .works {
-    display: none;
-  }
+@media screen and (max-height : 380px) {
+    .skills {
+      .skill-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        h3 {
+          display: inline-block;
+          padding: 0.03rem;
+          border: 1px solid white;
+          border-radius: 5px;
+          margin: 0.04rem;
+        }
+        .HTML,
+        .CSS,
+        .JS,
+        .JQ,
+        .ES,
+        .LESS,
+        .WG {
+          display: none;
+        }
+      }
+    }
 }

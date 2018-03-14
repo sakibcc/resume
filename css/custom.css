@@ -185,6 +185,7 @@ i {
 .skills {
   text-align: center;
   color: #FFF;
+  overflow: hidden;
   display: table-cell;
   vertical-align: middle;
 }
@@ -480,11 +481,26 @@ i {
     line-height: 0.4rem;
   }
 }
-@media screen and (orientation: landscape) {
-  .skills {
-    display: none;
+@media screen and (max-height: 380px) {
+  .skills .skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
-  .works {
+  .skills .skill-list h3 {
+    display: inline-block;
+    padding: 0.03rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 0.04rem;
+  }
+  .skills .skill-list .HTML,
+  .skills .skill-list .CSS,
+  .skills .skill-list .JS,
+  .skills .skill-list .JQ,
+  .skills .skill-list .ES,
+  .skills .skill-list .LESS,
+  .skills .skill-list .WG {
     display: none;
   }
 }
