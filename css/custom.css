@@ -503,4 +503,25 @@ i {
   .skills .skill-list .WG {
     display: none;
   }
+  .page4 .title {
+    padding-top: 4%;
+  }
+  .programs {
+    overflow: hidden;
+    position: relative;
+    width: auto;
+    padding-right: 2.3rem;
+  }
+  .programs .pgtitle {
+    display: inline-block;
+  }
+  .programs .outcon {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    transform: translateX(50%);
+  }
+  .programs .outcon .touchon {
+    border-top: .02rem solid #fff;
+  }
 }
