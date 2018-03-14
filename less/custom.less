@@ -258,7 +258,9 @@ em,i{font-style: normal;}
   align-items: center;
 }
 .works {
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
     text-align: center;
     .title {
     margin-bottom: 0.4rem;
@@ -562,9 +564,13 @@ em,i{font-style: normal;}
         display: inline-block;
         position: absolute;
         top: 0;
-        transform: translateX(50%);
+        -webkit-transform: translateX(50%);transform: translateX(50%);
+        .description {
+          opacity: 0;
+        }
         .touchon {
           border-top: .02rem solid #fff;
+          opacity: 1;
        }
       }
       

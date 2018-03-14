@@ -253,7 +253,9 @@ i {
   align-items: center;
 }
 .works {
-  flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
   text-align: center;
 }
 .works .title {
@@ -519,9 +521,14 @@ i {
     display: inline-block;
     position: absolute;
     top: 0;
+    -webkit-transform: translateX(50%);
     transform: translateX(50%);
+  }
+  .programs .outcon .description {
+    opacity: 0;
   }
   .programs .outcon .touchon {
     border-top: .02rem solid #fff;
+    opacity: 1;
   }
 }
