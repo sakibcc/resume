@@ -480,3 +480,11 @@ i {
     line-height: 0.4rem;
   }
 }
+@media screen and (orientation: landscape) {
+  .skills {
+    display: none;
+  }
+  .works {
+    display: none;
+  }
+}
